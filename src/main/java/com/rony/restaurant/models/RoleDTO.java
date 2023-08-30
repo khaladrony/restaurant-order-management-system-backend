@@ -12,10 +12,11 @@ import lombok.*;
 public class RoleDTO {
 
     private Long id;
+    private int version;
     private String name;
     private String description;
     private String status;
-    private int version;
+
 
     public RoleDTO(Role role){
         this.setId(role.getId());

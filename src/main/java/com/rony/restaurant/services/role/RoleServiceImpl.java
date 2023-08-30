@@ -5,6 +5,7 @@ import com.rony.restaurant.exception.GeneralException;
 import com.rony.restaurant.exception.NotFoundException;
 import com.rony.restaurant.exception.ServiceException;
 import com.rony.restaurant.models.RoleDTO;
+import com.rony.restaurant.models.UserDTO;
 import com.rony.restaurant.repository.RoleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -96,9 +97,10 @@ public class RoleServiceImpl implements RoleService {
     }
 
     private void duplicateCheck(RoleDTO roleDTO, String type) throws ServiceException {
+        RoleDTO roleDTOObj = this.findByName(roleDTO.getName());
+        if (roleDTOObj == null) return;
 
-        if (type.equalsIgnoreCase("save")
-                && this.findByName(roleDTO.getName()) != null) {
+        if (type.equalsIgnoreCase("save")) {
             throw new GeneralException("The role exists");
         } else {
             int count = roleRepository.countByName(roleDTO.getId(), roleDTO.getName());

@@ -5,11 +5,9 @@ import com.rony.restaurant.entity.Role;
 import com.rony.restaurant.entity.User;
 import lombok.*;
 
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
 public class UserDTO {
     private Long id;
     private int version;

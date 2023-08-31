@@ -2,9 +2,13 @@ package com.rony.restaurant.models;
 
 
 import com.rony.restaurant.entity.ImageUpload;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class ImageUploadDTO {
     private Long id;
     private String name;

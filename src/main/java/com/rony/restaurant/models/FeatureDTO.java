@@ -4,11 +4,9 @@ package com.rony.restaurant.models;
 import com.rony.restaurant.entity.Feature;
 import lombok.*;
 
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
 public class FeatureDTO {
 
     private Long id;

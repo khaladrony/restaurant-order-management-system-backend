@@ -5,11 +5,9 @@ import com.rony.restaurant.entity.FeatureMapping;
 import com.rony.restaurant.entity.Role;
 import lombok.*;
 
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
 public class FeatureMappingDTO {
 
     private Long id;

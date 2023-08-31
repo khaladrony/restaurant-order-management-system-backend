@@ -2,12 +2,10 @@ package com.rony.restaurant.models;
 
 import lombok.*;
 
-@Getter
-@Setter
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@ToString
 public class JwtRequest {
 
     private String username;

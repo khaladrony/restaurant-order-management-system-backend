@@ -4,11 +4,9 @@ package com.rony.restaurant.models;
 import com.rony.restaurant.entity.Role;
 import lombok.*;
 
-@Getter
-@Setter
-@NoArgsConstructor
+@Data
 @AllArgsConstructor
-@ToString
+@NoArgsConstructor
 public class RoleDTO {
 
     private Long id;
